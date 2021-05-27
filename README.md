@@ -1,5 +1,50 @@
 # Building a Todo App with CRA, Mirage JS, Formik, and TypeScript
+
 Started: Wed 26 May 2021 11:24:17
+
+## Purpose
+
+Having just completed a contract, I wanted to build a simple to consolidate what I learned. I wanted to concentrate more
+on how I was building it and not what I was building.
+
+## Users stories & experience
+
+### General
+
+As a user, I wanted mange my tasks so that I can keep on top of priorities and commitments
+
+### Task creation and management
+
+As a user, I want to create tasks so that I can track details and status over time
+
+As a user, I want to capture the name, description, due date, category label, priority and completion status for a task
+
+As a user, I want to update the name, description, due date, category, priority and completion status of tasks, so I can
+manage priorities and commitments as they change over time
+
+As a user, I want to make task as complete so that I know what tasks completed and which are outstanding
+
+As a user, I want to be able to archive tasks, so they are out of sight but can be retrieved if needed in the future
+
+As a user, I want to be able to delete tasks, so I can focus on tasks that matter to me
+
+As a user, I want to notified of overdue tasks, so I can decide to re prioritise, complete or archive it
+
+### Task list creation and management
+
+As a user, I want to see all my tasks in a default view that can be sorted by priority and/or date
+
+As a user, I want to see my most important tasks for the day ordered by priority as the default view when I load the app
+
+As a user, I want to create categories (AKA lists) so that I can group tasks based on contexts meaningful to me
+
+### Design
+
+As a user, I want to see a list of task lists so that I can quickly navigate between them
+
+As a user, I want to be able to show or hide my task lists to focus on the list I'm currently working in
+
+As a user, I want search my tasks, so that I can manage tasks quickly
 
 ## Technologies:
 
@@ -13,6 +58,9 @@ Started: Wed 26 May 2021 11:24:17
 - Jest and [React Testing Library](https://testing-library.com/)
 - [React Router](https://reactrouter.com/)
 - [React Query](https://react-query.tanstack.com/)
+- [React error boundary](https://www.npmjs.com/package/react-error-boundary)
+- [Styled Components](https://www.npmjs.com/package/react-error-boundary)
+  )
 
 ## Installation
 
@@ -28,19 +76,34 @@ I used [yarn](https://yarnpkg.com/), the default package manager for CRA. You op
 `yarn add --dev miragejs @miragejs/graphql`
 
 ### Formik & Yup
+
 `yarn add formik`
 `yarn add yup @types/yup`
 
 ### React Query
+
 `yarn add react-query @types/react-query`
 
 ### React Router
+
 `yarn add react-router-dom @types/react-router-dom`
 
+### Others
+
+`yarn add husky lint-staged prettier`
+`yarn add serve`
+`yarn add react-error-boundary`
+
 ### Jest and React Testing Library
+
 The news is CRA has out of the box support for Jest and React Testing Library (RTL)
 
+### Installing and using react-error-boundary
+
+https://kentcdodds.com/blog/use-react-error-boundary-to-handle-errors-in-react
+
 By now the dependencies in your package.json file should look something like this:
+
 ```json
 "dependencies": {
 "@testing-library/jest-dom": "^5.11.4",
